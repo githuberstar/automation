@@ -1,10 +1,9 @@
 from selenium.webdriver import Remote
-from selenium.webdriver import R
 
-lists = {'http://127.0.0.1:4445/wd/hub': 'chrome',
-         'http://192.168.1.243/wd/hub': 'chrome'}
+lists = {'http://192.168.19.102:5555/wd/hub': 'chrome'}
+lists2 = {'http://127.0.0.1:4444/wd/hub': 'chrome'}
 
-for host, browser in lists.items():
+for host, browser in lists2.items():
     print(host, browser)
     driver = Remote(command_executor=host,
                     desired_capabilities={'platform': 'ANY',
