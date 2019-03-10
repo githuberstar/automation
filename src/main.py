@@ -2,6 +2,7 @@ from src.test_case_1.reportingForEndorsement_sta import ReportingForEndorsementT
 from HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from selenium.webdriver import Remote
 import smtplib
 import unittest
 import time
@@ -43,6 +44,17 @@ def send_mail(file_new):
     smtp.sendmail(sender, receiver, msgRoot.as_string())  # 发送邮件
     smtp.quit()
     print('sendmail success')
+
+
+def browser_driver(host, browser_name):
+    driver = Remote(command_executor=host,
+                    desired_capabilities={'platform': 'ANY',
+                                          'browserName': browser_name,
+                                          'version': '',
+                                          'javascriptEnabled': True
+                                        }
+                    )
+    return driver
 
 
 if __name__ == "__main__":

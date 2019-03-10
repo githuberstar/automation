@@ -1,13 +1,13 @@
 from selenium import webdriver
-from .driver import browser
+from .driver import thread_test
 import unittest
 import os
 
 
 class MyTest(unittest.TestCase):
     def setUp(self):
-        # self.driver = browser()
-        self.driver = webdriver.Chrome()
+        self.driver = thread_test()
+        # self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
 
