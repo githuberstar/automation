@@ -3,13 +3,6 @@ from threading import Thread
 from selenium import webdriver
 
 
-# def browser():
-#     # driver = webdriver.Chrome()
-#     host = '127.0.0.1:4444'
-#     dc = {'browserName': 'chrome'}
-#     driver_name = Remote(command_executor='http://' + host + '/wd/hub',
-#                     desired_capabilities=dc)
-#     return driver_name
 lists = {'http://192.168.19.102:5555/wd/hub': 'chrome', 'http://192.168.19.102:5556/wd/hub': 'chrome'}
 
 
@@ -32,6 +25,5 @@ def thread_test():
         threads.append(t)
     for i in threads:
         i.start()
-    for i in threads:
-        i.join()
+        print(1)
 

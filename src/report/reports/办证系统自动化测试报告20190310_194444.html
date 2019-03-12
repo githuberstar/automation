@@ -189,8 +189,8 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>办证系统自动化测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-03-10 12:44:42</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:11.491425</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-03-10 19:44:44</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:19.637986</p>
 <p class='attribute'><strong>Status:</strong> Error 1</p>
 
 <p class='description'>模块的用例执行情况：</p>
@@ -246,38 +246,126 @@ function showOutput(id, name) {
         <pre>
         
 ft1.1: Traceback (most recent call last):
-  File "D:\File\python\bztest\src\test_case_1\reportingForEndorsement_sta.py", line 12, in test_basic
-    test.notary_category()
-  File "D:\File\python\bztest\src\page_object\basicInfoPage.py", line 28, in notary_category
-    self.find_element(*self.notary_class_value).click()
-  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
+  File "D:\File\python\bztest\src\models\myunit.py", line 9, in setUp
+    self.driver = browser_driver('192.168.19.102:5555', 'chrome')
+  File "D:\File\python\bztest\src\models\driver.py", line 14, in browser_driver
+    'javascriptEnabled': True
+  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
   File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
     self.error_handler.check_response(response)
-  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (420, 95). Other element would receive the click: &lt;li class="el-select-dropdown__item"&gt;...&lt;/li&gt;
-  (Session info: chrome=72.0.3626.121)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17763 x86_64)
+  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 208, in check_response
+    raise exception_class(value)
+selenium.common.exceptions.WebDriverException: Message: &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;link rel="stylesheet" type="text/css" href="/assets/displayhelpservlet.css" media="all"/&gt;
+  &lt;link href="/assets/favicon.ico" rel="icon" type="image/x-icon" /&gt;
+  &lt;script src="/assets/jquery-3.1.1.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/assets/displayhelpservlet.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript"&gt;
+    var json = Object.freeze('{"consoleLink": "\u002fwd\u002fhub","type": "Grid Node","class": "org.openqa.grid.web.servlet.DisplayHelpHandler$DisplayHelpServletConfig","version": "3.141.59"}');
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id="content"&gt;
+  &lt;div id="help-heading"&gt;
+    &lt;h1&gt;&lt;span id="logo"&gt;&lt;/span&gt;&lt;/h1&gt;
+    &lt;h2&gt;Selenium &lt;span class="se-type"&gt;&lt;/span&gt;&amp;nbsp;v.&lt;span class="se-version"&gt;&lt;/span&gt;&lt;/h2&gt;
+  &lt;/div&gt;
+
+  &lt;div id="content-body"&gt;
+    &lt;p&gt;
+      Whoops! The URL specified routes to this help page.
+    &lt;/p&gt;
+    &lt;p&gt;
+      For more information about Selenium &lt;span class="se-type"&gt;&lt;/span&gt; please see the
+      &lt;a class="se-docs"&gt;docs&lt;/a&gt; and/or visit the &lt;a class="se-wiki"&gt;wiki&lt;/a&gt;.
+      &lt;span id="console-item"&gt;
+        Or perhaps you are looking for the Selenium &lt;span class="se-type"&gt;&lt;/span&gt; &lt;a class="se-console"&gt;console&lt;/a&gt;.
+      &lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      Happy Testing!
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;footer id="help-footer"&gt;
+      Selenium is made possible through the efforts of our open source community, contributions from
+      these &lt;a href="https://github.com/SeleniumHQ/selenium/blob/master/AUTHORS"&gt;people&lt;/a&gt;, and our
+      &lt;a href="http://www.seleniumhq.org/sponsors/"&gt;sponsors&lt;/a&gt;.
+   &lt;/footer&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 
 Traceback (most recent call last):
-  File "D:\File\python\bztest\src\test_case_1\reportingForEndorsement_sta.py", line 12, in test_basic
-    test.notary_category()
-  File "D:\File\python\bztest\src\page_object\basicInfoPage.py", line 28, in notary_category
-    self.find_element(*self.notary_class_value).click()
-  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
-    return self._parent.execute(command, params)
+  File "D:\File\python\bztest\src\models\myunit.py", line 9, in setUp
+    self.driver = browser_driver('192.168.19.102:5555', 'chrome')
+  File "D:\File\python\bztest\src\models\driver.py", line 14, in browser_driver
+    'javascriptEnabled': True
+  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
   File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
     self.error_handler.check_response(response)
-  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (420, 95). Other element would receive the click: &lt;li class="el-select-dropdown__item"&gt;...&lt;/li&gt;
-  (Session info: chrome=72.0.3626.121)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17763 x86_64)
+  File "D:\File\python\bztest\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 208, in check_response
+    raise exception_class(value)
+selenium.common.exceptions.WebDriverException: Message: &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;link rel="stylesheet" type="text/css" href="/assets/displayhelpservlet.css" media="all"/&gt;
+  &lt;link href="/assets/favicon.ico" rel="icon" type="image/x-icon" /&gt;
+  &lt;script src="/assets/jquery-3.1.1.min.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script src="/assets/displayhelpservlet.js" type="text/javascript"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript"&gt;
+    var json = Object.freeze('{"consoleLink": "\u002fwd\u002fhub","type": "Grid Node","class": "org.openqa.grid.web.servlet.DisplayHelpHandler$DisplayHelpServletConfig","version": "3.141.59"}');
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id="content"&gt;
+  &lt;div id="help-heading"&gt;
+    &lt;h1&gt;&lt;span id="logo"&gt;&lt;/span&gt;&lt;/h1&gt;
+    &lt;h2&gt;Selenium &lt;span class="se-type"&gt;&lt;/span&gt;&amp;nbsp;v.&lt;span class="se-version"&gt;&lt;/span&gt;&lt;/h2&gt;
+  &lt;/div&gt;
+
+  &lt;div id="content-body"&gt;
+    &lt;p&gt;
+      Whoops! The URL specified routes to this help page.
+    &lt;/p&gt;
+    &lt;p&gt;
+      For more information about Selenium &lt;span class="se-type"&gt;&lt;/span&gt; please see the
+      &lt;a class="se-docs"&gt;docs&lt;/a&gt; and/or visit the &lt;a class="se-wiki"&gt;wiki&lt;/a&gt;.
+      &lt;span id="console-item"&gt;
+        Or perhaps you are looking for the Selenium &lt;span class="se-type"&gt;&lt;/span&gt; &lt;a class="se-console"&gt;console&lt;/a&gt;.
+      &lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      Happy Testing!
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;footer id="help-footer"&gt;
+      Selenium is made possible through the efforts of our open source community, contributions from
+      these &lt;a href="https://github.com/SeleniumHQ/selenium/blob/master/AUTHORS"&gt;people&lt;/a&gt;, and our
+      &lt;a href="http://www.seleniumhq.org/sponsors/"&gt;sponsors&lt;/a&gt;.
+   &lt;/footer&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
 
 
 

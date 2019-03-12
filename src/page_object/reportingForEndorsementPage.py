@@ -73,24 +73,6 @@ class Banzheng(Page):
         driver.find_element_by_xpath(notary_service_value).click()
         driver.implicitly_wait(10)
 
-        # 受理地点
-        # accept_address =
-
-        # 译文
-        # translation_arr =
-
-        # 公证书份数
-        # notary_number =
-
-        # 增值服务
-        # value_added_service =
-
-        # 紧急度
-        # emergency =
-
-        # 备注
-        # memo =
-
         # 添加申请人
         add_applier = '//*[@id="app"]/div[4]/div[3]/div[1]/div[1]/button[2]'
         driver.find_element_by_xpath(add_applier).click()
