@@ -3,6 +3,7 @@ from HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from selenium.webdriver import Remote
+from threading import Thread
 import smtplib
 import unittest
 import time
@@ -12,11 +13,13 @@ import sys
 sys.path.append( 'D:\\File\\python\\bztest\\src')
 print(sys.path)
 
+testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
 
-def new_report(testreport):
-    lists = os.listdir(testreport)
-    lists.sort(key=lambda fn: os.path.getatime(testreport+"\\"+fn))
-    file_new = os.path.join(testreport, lists[-1])
+
+def new_report(report):
+    lists = os.listdir(report)
+    lists.sort(key=lambda fn: os.path.getatime(report+"\\"+fn))
+    file_new = os.path.join(report, lists[-1])
     return file_new
 
 
@@ -58,10 +61,8 @@ def browser_driver(host, browser_name):
 
 
 if __name__ == "__main__":
-    testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
-    test_suit = unittest.TestSuite()
-    test_suit.addTest(ReportingForEndorsementTest("test_basic"))
-
+    test_suit = unittest.TestSuite()  # 创建测试用例集，unittest.main()是找出所有的test开头的测试用例
+    test_suit.addTest(ReportingForEndorsementTest("test_notarization_documents"))  # 向测试用例集添加测试用例
     now = time.strftime("%Y%m%d_%H%M%S")
     filename = './report/reports/'+'办证系统自动化测试报告'+now+'.html'
     fp = open(filename, 'wb')
@@ -70,5 +71,22 @@ if __name__ == "__main__":
                             description='模块的用例执行情况：')
     runner.run(test_suit)
     fp.close()
-    new_report = new_report(testreport)
-    send_mail(new_report)
+    newreport1 = new_report(testreport)
+    send_mail(newreport1)
+
+# 以后再弄多线程
+# if __name__ == "__main__":
+#     lists = {'http://127.0.0.1:4444/wd/hub': 'chrome',
+#              'http://192.168.5.125:4444/wd/hub': 'chrome'}
+#     threads = []
+#     files = range(len(lists))
+#
+#     for host, browser in lists.items():
+#         t = Thread(target=multithread, args=(host, browser))
+#         threads.append(t)
+#
+#     for i in files:
+#         threads[i].start()
+#     for i in files:
+#         threads[i].join()
+

@@ -3,7 +3,7 @@ class Page(object):
     页面基础类
     '''
 
-    base_url = 'http://aonxin.com:8889'
+    base_url = 'https://oatest.enotary.com.cn'
 
     def __init__(self, selenium_driver, base_url=base_url, parent=None):
         self.base_url = base_url
