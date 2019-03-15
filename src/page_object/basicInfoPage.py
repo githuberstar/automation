@@ -110,7 +110,7 @@ class Applier(Page):
         ActionChains(self.driver).double_click(id_number_button).perform()
         time.sleep(1)
         self.find_element(*self.save).click()
-        time.sleep(10)
+        time.sleep(1)
 
 
 class NotarizationMatter(Page):

@@ -1,17 +1,16 @@
-from src.test_case_1.reportingForEndorsement_sta import ReportingForEndorsementTest
 from HTMLTestRunner import HTMLTestRunner
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from selenium.webdriver import Remote
-from threading import Thread
+import sys
+sys.path.append('D:\\File\\python\\bztest')
+from src.test_case_1.reportingForEndorsement_sta import ReportingForEndorsementTest
+# from threading import Thread
 import smtplib
 import unittest
 import time
 import os
-import sys
 
-sys.path.append( 'D:\\File\\python\\bztest\\src')
-print(sys.path)
 
 testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
 
