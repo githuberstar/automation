@@ -3,6 +3,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from .base import Page
 from .loginPage import Login
 import time
+from ..tools import remote_exe
 import os
 
 url = '/'
@@ -142,7 +143,7 @@ class NotarizationDocuments(Page):
         time.sleep(20)
 
         # 手工操作
-        os.system("C:\\Users\\zhujihui\\Desktop\\auto_save.exe")
+        remote_exe()
         time.sleep(20)
 
         exit = '//*[@id="app"]/div[4]/div[1]/div/div[1]/button[4]/span'
