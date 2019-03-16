@@ -10,7 +10,7 @@ lists = {'http://192.168.19.102:5555/wd/hub': 'chrome', 'http://192.168.19.102:5
 class MyTest(unittest.TestCase):
     def setUp(self):
         # self.driver = browser_driver('http://192.168.5.125:4444/wd/hub', 'chrome') # 大坑 不要忘了/wd/hub
-        self.driver = browser_driver('http://127.0.0.1:4444/wd/hub', 'chrome')  # 大坑 不要忘了/wd/hub
+        self.driver = browser_driver('http://192.168.19.102:4444/wd/hub', 'chrome')  # 大坑 不要忘了/wd/hub
         #self.driver = webdriver.Chrome()
         #self.driver = thread_test()
         self.driver.maximize_window()
