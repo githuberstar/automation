@@ -3,8 +3,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from selenium.webdriver import Remote
 import sys
-sys.path.append('D:\\File\\python\\bztest')
-sys.path.append('/root/myproject/automation')
+windows_home = 'D:\\File\\python\\bztest'
+linux_home = '/root/myproject/automation'
+sys.path.append(windows_home)
+sys.path.append(linux_home)
 from src.test_case_1.reportingForEndorsement_sta import ReportingForEndorsementTest
 # from threading import Thread
 import smtplib
