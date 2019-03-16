@@ -74,8 +74,8 @@ if __name__ == "__main__":
                             description='模块的用例执行情况：')
     runner.run(test_suit)
     fp.close()
-    newreport1 = new_report(testreport)
-    send_mail(newreport1)
+    # newreport1 = new_report(testreport)
+    # send_mail(newreport1)
 
 # 以后再弄多线程
 # if __name__ == "__main__":
