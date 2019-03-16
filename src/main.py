@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from selenium.webdriver import Remote
 import sys
 sys.path.append('D:\\File\\python\\bztest')
+sys.path.append('/root/myproject/automation')
 from src.test_case_1.reportingForEndorsement_sta import ReportingForEndorsementTest
 # from threading import Thread
 import smtplib
