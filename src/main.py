@@ -15,7 +15,8 @@ import time
 import os
 
 
-testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
+# testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
+testreport = linux_home + '/report/reports'
 
 
 def new_report(report):
