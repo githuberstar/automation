@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import NoSuchElementException
 from .base import Page
 from .loginPage import Login
 import time
@@ -28,7 +29,7 @@ class BasicInfo(Page):
     """基本信息录入"""
 
     url = '/'
-    notary_class_xpath = (By.XPATH, '//*[@id="app"]/div[4]/div[1]/form/div[1]/div[1]/div/div/div/div/div[1]/input')
+    notary_class_xpath = (By.XPATH, '//*[@id="app"]/div[4]/div[1]/form/div[1]/div[1]/div/div/div/div/div[1]/input1')
     notary_class_value = (By.XPATH, '/html/body/div[2]/div[1]/div[1]/ul/li[3]/span')
     useland = (By.XPATH, '//*[@id="app"]/div[4]/div[1]/form/div[1]/div[2]/div/div/div/input')
     use_land_other = (By.XPATH, '//*[@id="app"]/div[4]/div[1]/form/div[1]/div[3]/div/div/label')
@@ -41,8 +42,11 @@ class BasicInfo(Page):
 
     def notary_category(self):
         """公证类别"""
-        self.find_element(*self.notary_class_xpath).click()
-        self.find_element(*self.notary_class_value).click()
+        try:
+            self.find_element(*self.notary_class_xpath).click()
+            self.find_element(*self.notary_class_value).click()
+        except NoSuchElementException as msg:
+            raise
 
     def use_land(self):
         """使用地"""
