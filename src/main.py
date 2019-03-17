@@ -15,8 +15,8 @@ import time
 import os
 
 
-# testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
-testreport = linux_home + '/src/report/reports'
+testreport = 'D:\\File\\python\\bztest\\src\\report\\reports'
+# testreport = linux_home + '/src/report/reports'
 
 
 def new_report(report):
@@ -74,7 +74,7 @@ if __name__ == "__main__":
                             description='模块的用例执行情况：')
     runner.run(test_suit)
     fp.close()
-    # newreport1 = new_report(testreport)
+    newreport1 = new_report(testreport)
     # send_mail(newreport1)
 
 # 以后再弄多线程

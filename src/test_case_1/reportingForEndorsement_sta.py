@@ -41,11 +41,13 @@ class ReportingForEndorsementTest(myunit.MyTest):
         notarization_matter.add_notarization_matter()
 
     def test_notarization_documents(self):
+        print("""测试开始""")
         self.test_basic()
         self.test_applier()
         self.test_notarization_matter()
         notarization_documents = NotarizationDocuments(self.driver)
         notarization_documents.add_notarization_document()
+        print("""测试结束""")
 
 
 if __name__ == "__main__":

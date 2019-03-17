@@ -1,0 +1,1 @@
+1.从服务端远程remote driver调用windows客户端的chrome同时调autoit脚本时，应在客户机上先开启auto.py监听服务端请求
